@@ -11,6 +11,7 @@ RUN apk add --update \
     gcc \
     libc-dev \
     mariadb-dev \
+  && pip install --upgrade pip  \
   && pip install -r requirements.txt \
   && rm -rf /var/cache/apk/*
 
