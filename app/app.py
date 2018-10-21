@@ -1,11 +1,8 @@
 from flask import Flask
-from flask_bootstrap import Bootstrap
 from product_api import product_api_blueprint
 import models
 
 app = Flask(__name__)
-
-bootstrap = Bootstrap(app)
 
 app.config.update(dict(
     SECRET_KEY="powerful secretkey",
