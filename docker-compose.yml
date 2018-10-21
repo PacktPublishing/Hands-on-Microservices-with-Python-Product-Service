@@ -1,0 +1,26 @@
+version: '3'
+
+volumes:
+  product-db-data:
+
+services:
+  product:
+    build:
+      context: .
+    ports:
+      - 80:5000
+    volumes:
+      - ./app:/app
+    links:
+      - product_db
+    depends_on:
+      - product_db
+
+  product_db:
+    image: mysql:5.7.22
+    volumes:
+      - product-db-data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=test
+      - MYSQL_DATABASE=product
+    restart: always
