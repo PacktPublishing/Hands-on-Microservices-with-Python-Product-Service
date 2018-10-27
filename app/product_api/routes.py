@@ -2,6 +2,7 @@ from flask import json, jsonify, request
 from . import product_api_blueprint
 from models import db, Product
 
+
 @product_api_blueprint.route('/api/products', methods=['GET'])
 def products():
 
