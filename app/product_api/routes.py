@@ -1,4 +1,4 @@
-from flask import json, jsonify, request, send_from_directory
+from flask import json, jsonify, request
 from . import product_api_blueprint
 from models import db, Product
 
