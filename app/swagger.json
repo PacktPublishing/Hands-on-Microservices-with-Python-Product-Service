@@ -1,0 +1,110 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Product service for order management system micro service",
+        "version": "1.0.0",
+        "title": "Product Service"
+    },
+    "host": "192.168.99.102:8081",
+    "basePath": "/api",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+      "/products": {
+        "get": {
+          "tags": [
+            "Product"
+          ],
+          "summary": "Get all the products",
+          "description": "",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            }
+          }
+        }
+      },
+      "/product/{slug}": {
+        "get": {
+          "tags": [
+            "Product"
+          ],
+          "summary": "Finds a product by it's slug",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "slug",
+              "in": "path",
+              "description": "Product slug",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "404": {
+              "description": "Product not found"
+            }
+          }
+        }
+      },
+      "/product/create": {
+        "post": {
+          "tags": [
+            "Product"
+          ],
+          "summary": "Creates a product",
+          "description": "",
+          "consumes": [
+            "multipart/form-data"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "name",
+              "in": "formData",
+              "description": "Additional data to pass to server",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "slug",
+              "in": "formData",
+              "description": "Product slug",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "image",
+              "in": "formData",
+              "description": "Image path",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "name": "price",
+              "in": "formData",
+              "description": "Image path",
+              "required": false,
+              "type": "integer"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            }
+          }
+        }
+      }
+    }
+}

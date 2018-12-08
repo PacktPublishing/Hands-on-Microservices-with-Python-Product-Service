@@ -1,6 +1,14 @@
-from flask import json, jsonify, request
+from flask import json, jsonify, request, send_from_directory
 from . import product_api_blueprint
 from models import db, Product
+
+
+@product_api_blueprint.route("/api/product/docs.json", methods=['GET'])
+def swagger_api_docs_yml():
+    with open('swagger.json') as fd:
+        json_data = json.load(fd)
+
+    return jsonify(json_data)
 
 
 @product_api_blueprint.route('/api/products', methods=['GET'])
