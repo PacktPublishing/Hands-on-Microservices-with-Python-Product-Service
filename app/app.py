@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory
+from flask import Flask
 from product_api import product_api_blueprint
 from flask_swagger_ui import get_swaggerui_blueprint
 import models
