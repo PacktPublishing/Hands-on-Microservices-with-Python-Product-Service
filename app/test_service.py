@@ -3,7 +3,6 @@ import setup
 
 
 class ProductServiceTestCase(unittest.TestCase):
-    """This class represents the bucketlist test case"""
 
     def setUp(self):
         """Define test variables and initialize app."""
