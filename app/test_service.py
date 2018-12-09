@@ -22,6 +22,20 @@ class ProductServiceTestCase(unittest.TestCase):
                     "name": "Product 1",
                     "price": 2,
                     "slug": "product-1"
+                },
+                {
+                    "id": 2,
+                    "image": "coffee.png",
+                    "name": "Coffee",
+                    "price": 5,
+                    "slug": "product-2"
+                },
+                {
+                    "id": 3,
+                    "image": "rubber_duck.png",
+                    "name": "Rubber Duck",
+                    "price": 2,
+                    "slug": "product-3"
                 }
             ]
         }
