@@ -5,7 +5,7 @@
         "version": "1.0.0",
         "title": "Product Service"
     },
-    "host": "192.168.99.102:8081",
+    "host": "192.168.99.100:8081",
     "basePath": "/api",
     "schemes": [
         "http"
