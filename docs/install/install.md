@@ -5,7 +5,7 @@
 
 Run the following against the product container
 ```
-$ docker exec -i <CHANGE_TO_CONTAINER_NAME> python add_producsts.py
+$ docker exec -i <CHANGE_TO_CONTAINER_NAME> python add_products.py
 ```
 
 To find the container:
