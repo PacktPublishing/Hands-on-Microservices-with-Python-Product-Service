@@ -22,4 +22,4 @@ b86246a5b652        mysql:5.7.22           "docker-entrypoint.s…"   About an h
 
 ```
 
-in this case the container name is ``frontendgit_product_1``
+In this case the container name is ``frontendgit_product_1``
